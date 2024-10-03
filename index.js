@@ -7,7 +7,7 @@ const connectDB=require("./db");
 const authRoutes = require("./routes/auth");
 const otpRoutes = require("./routes/otp");
 require("dotenv").config();
-const PORT=process.env.PORT;
+const PORT=process.env.PORT || 3000;
 connectDB();
 app.use(express.json());
 
