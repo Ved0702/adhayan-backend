@@ -14,9 +14,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-      
+
       - name: Install Dependencies
         run: npm install
-        
+
+      - name: Connect to MongoDB
+        run: |
+          echo "Connecting to MongoDB at ${{ secrets.MONGODB_URL }}"
+      
       - name: Run Build
         run: npm run build
