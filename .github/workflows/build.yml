@@ -20,7 +20,7 @@ jobs:
 
       - name: Connect to MongoDB
         run: |
-          echo "Connecting to MongoDB at ${{ secrets.MONGODB_URL }}"
+          echo "Connecting to MongoDB at ${{ secrets.MONGO_URL }}"
       
       - name: Run Build
         run: npm run build
